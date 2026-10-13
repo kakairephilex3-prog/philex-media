@@ -2,271 +2,282 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#101114">
-  <meta name="description" content="PHILEX MEDIA — Music, creators, marketplace, advertising, business management and media production.">
-  <title>PHILEX MEDIA</title>
-  <style>
-    :root {
-      color-scheme: dark;
-      --bg: #101114;
-      --panel: #191b20;
-      --text: #f7f7f8;
-      --muted: #a5a7b0;
-      --accent: #e8c75a;
-      --line: #30323a;
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      background: var(--bg);
-      color: var(--text);
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-    }
-    a { color: inherit; text-decoration: none; }
-    button, input { font: inherit; }
-    .wrap { width: min(1100px, 92%); margin: auto; }
-    header {
-      border-bottom: 1px solid var(--line);
-      background: #101114;
-      position: sticky;
-      top: 0;
-      z-index: 5;
-    }
-    .nav {
-      min-height: 72px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-    }
-    .brand { font-size: 21px; font-weight: 800; letter-spacing: 1px; }
-    .brand span { color: var(--accent); }
-    .links { display: flex; gap: 18px; flex-wrap: wrap; }
-    .links a { color: var(--muted); font-size: 14px; }
-    .links a:hover { color: var(--accent); }
-    .hero { padding: 76px 0 60px; }
-    .tag {
-      color: var(--accent);
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-size: 12px;
-      font-weight: bold;
-    }
-    h1 { font-size: clamp(38px, 7vw, 70px); line-height: 1.08; margin: 16px 0; }
-    h1 span { color: var(--accent); }
-    .intro { max-width: 650px; color: var(--muted); font-size: 17px; }
-    .actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 26px; }
-    .btn {
-      display: inline-block;
-      padding: 12px 18px;
-      border-radius: 8px;
-      background: var(--accent);
-      color: #17140a;
-      font-weight: bold;
-      border: 1px solid var(--accent);
-      cursor: pointer;
-    }
-    .btn.secondary { background: transparent; color: var(--text); border-color: var(--line); }
-    section { padding: 40px 0; }
-    .section-head { margin-bottom: 24px; }
-    h2 { font-size: 29px; margin: 0 0 8px; }
-    .muted { color: var(--muted); }
-    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-    .card {
-      background: var(--panel);
-      border: 1px solid var(--line);
-      border-radius: 14px;
-      padding: 22px;
-      min-width: 0;
-    }
-    .symbol { font-size: 28px; }
-    .card h3 { margin: 10px 0 6px; }
-    .card p { color: var(--muted); font-size: 14px; }
-    .card a { color: var(--accent); font-weight: bold; font-size: 14px; }
-    .search {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      margin: 20px 0;
-    }
-    .search input {
-      flex: 1;
-      min-width: 180px;
-      padding: 12px;
-      border-radius: 8px;
-      background: var(--panel);
-      color: var(--text);
-      border: 1px solid var(--line);
-    }
-    #status { color: var(--accent); min-height: 24px; }
-    footer { border-top: 1px solid var(--line); padding: 25px 0; color: var(--muted); font-size: 13px; }
-    @media (max-width: 700px) {
-      .nav { align-items: flex-start; padding: 16px 0; flex-direction: column; }
-      .links { gap: 12px; }
-      .hero { padding-top: 48px; }
-      .grid { grid-template-columns: 1fr; }
-      h2 { font-size: 25px; }
-    }
-    @media (min-width: 480px) and (max-width: 700px) {
-      .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#101010">
+<title>PHILEX MEDIA — Music & Market</title>
+<style>
+:root{--bg:#101010;--panel:#191919;--panel2:#202020;--gold:#e8bd65;--text:#f7f3eb;--muted:#aaa69d;--line:#333}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif}
+button,input,textarea,select{font:inherit}
+button{cursor:pointer}
+header{position:sticky;top:0;z-index:5;background:#101010ed;border-bottom:1px solid var(--line);padding:15px 5%;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.logo{font-size:19px;font-weight:900;letter-spacing:1px}.logo span{color:var(--gold)}
+nav{display:flex;gap:8px}
+nav button,.btn{border:1px solid var(--line);border-radius:9px;background:var(--panel);color:var(--text);padding:11px 14px}
+nav button.active,.primary{background:var(--gold);color:#17130b;border-color:var(--gold);font-weight:700}
+main{max-width:1120px;margin:auto;padding:26px 5% 90px}
+.hero{padding:32px 0 26px}
+.eyebrow{color:var(--gold);font-size:12px;letter-spacing:2px;font-weight:bold}
+h1{font-size:clamp(30px,6vw,54px);line-height:1.05;margin:12px 0}
+h2{font-size:25px;margin:0 0 8px}h3{margin:0 0 10px}
+p{line-height:1.55}.muted{color:var(--muted)}.small{font-size:12px;color:var(--muted)}
+.section{display:none}.section.active{display:block}
+.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin:20px 0}
+input,textarea,select{width:100%;padding:12px;background:#111;color:var(--text);border:1px solid #444;border-radius:9px;margin:6px 0 14px}
+textarea{min-height:75px;resize:vertical}
+.search{flex:1;min-width:170px}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:18px 0}
+.card,.form-card,.empty{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px;min-width:0}
+.art{height:120px;border-radius:10px;background:linear-gradient(135deg,#392c17,#171717);display:grid;place-items:center;font-size:38px;color:var(--gold);margin-bottom:15px}
+.form-card{margin:20px 0;max-width:720px}
+label{font-size:13px;color:#ded8cc}
+.notice{padding:13px;border-left:3px solid var(--gold);background:#211d15;color:#e5d7b7;border-radius:5px;font-size:13px;line-height:1.5}
+.actions{display:flex;gap:8px;flex-wrap:wrap}
+.actions button{margin-top:8px}
+.item{display:flex;flex-direction:column;gap:8px}
+.item audio{width:100%;margin-top:8px}
+.item img{width:100%;height:150px;object-fit:cover;border-radius:9px}
+.price{color:var(--gold);font-size:20px;font-weight:bold}
+footer{border-top:1px solid var(--line);padding:25px 5%;text-align:center;color:var(--muted);font-size:12px}
+.hidden{display:none!important}
+@media(max-width:700px){
+ header{padding:13px 4%;align-items:flex-start;flex-direction:column}
+ nav{width:100%}nav button{flex:1;padding:11px 5px;font-size:13px}
+ main{padding:18px 4% 80px}
+ .grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+ .card,.form-card,.empty{padding:13px}
+ .art{height:90px}
+ h2{font-size:22px}
+}
+@media(max-width:390px){.grid{grid-template-columns:1fr}}
+</style>
 </head>
 <body>
-  <header>
-    <div class="wrap nav">
-      <a class="brand" href="#home">PHILEX <span>MEDIA</span></a>
-      <nav class="links" aria-label="Main navigation">
-        <a href="#hubs">Hubs</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
+<header>
+  <div class="logo">PHILEX <span>MEDIA</span></div>
+  <nav>
+    <button id="musicTab" class="active" onclick="showHub('music')">♫ Music</button>
+    <button id="marketTab" onclick="showHub('market')">◇ Market</button>
+  </nav>
+</header>
 
-  <main>
-    <div class="wrap hero" id="home">
-      <div class="tag">One platform. Many possibilities.</div>
-      <h1>Your world.<br>Your creativity.<br><span>Your media.</span></h1>
-      <p class="intro">
-        Welcome to PHILEX MEDIA, a mobile-first digital platform
-        bringing music, creators, marketplace, advertising,
-        business management and media production together.
-      </p>
-      <div class="actions">
-        <a class="btn" href="#hubs">Explore our hubs</a>
-        <a class="btn secondary" href="#about">Discover PHILEX</a>
-      </div>
+<main>
+  <section class="hero">
+    <div class="eyebrow">YOUR WORLD. YOUR PLATFORM.</div>
+    <h1 id="heroTitle">Discover the sound.</h1>
+    <p class="muted" id="heroText">A home for artists, music, and new discoveries.</p>
+  </section>
+
+  <section id="music" class="section active">
+    <h2>PHILEX MUSIC</h2>
+    <p class="muted">Explore music and preview audio files from your device.</p>
+    <div class="toolbar">
+      <input class="search" id="musicSearch" placeholder="Search tracks or artists..." oninput="renderMusic()">
+      <button class="btn primary" onclick="toggleForm('trackForm')">+ Add music</button>
     </div>
 
-    <section id="hubs">
-      <div class="wrap">
-        <div class="section-head">
-          <div class="tag">Explore the platform</div>
-          <h2>Everything in one place</h2>
-          <p class="muted">Choose a hub to explore its planned features.</p>
+    <div id="trackForm" class="form-card hidden">
+      <h3>Add a track</h3>
+      <p class="small">Choose an audio file to preview it in this browser. This does not upload it to a server.</p>
+      <form id="addTrackForm">
+        <label>Track title</label><input id="trackTitle" required maxlength="100" placeholder="Enter song title">
+        <label>Artist name</label><input id="trackArtist" required maxlength="100" placeholder="Artist or stage name">
+        <label>Genre</label>
+        <select id="trackGenre">
+          <option>Afrobeats</option><option>Gospel</option><option>Hip-hop</option>
+          <option>R&B</option><option>Dancehall</option><option>Pop</option><option>Other</option>
+        </select>
+        <label>Select audio file</label><input id="trackFile" type="file" accept="audio/*" required>
+        <div class="actions">
+          <button class="btn primary" type="submit">Preview track</button>
+          <button class="btn" type="button" onclick="toggleForm('trackForm')">Cancel</button>
         </div>
-
-        <div class="search">
-          <input id="hubSearch" type="search" placeholder="Search hubs..." aria-label="Search hubs">
-          <button class="btn" id="searchBtn" type="button">Search</button>
-        </div>
-        <p id="status" role="status" aria-live="polite"></p>
-
-        <div class="grid" id="hubGrid">
-          <article class="card" data-search="music audio artists songs">
-            <div class="symbol">♫</div>
-            <h3>Music Hub</h3>
-            <p>A home for artists, music discovery and audio experiences.</p>
-            <a href="#contact" data-hub="Music Hub">Explore hub →</a>
-          </article>
-          <article class="card" data-search="creators video content community">
-            <div class="symbol">✦</div>
-            <h3>Creators Hub</h3>
-            <p>A space for creators to showcase their work and ideas.</p>
-            <a href="#contact" data-hub="Creators Hub">Explore hub →</a>
-          </article>
-          <article class="card" data-search="marketplace products services shopping">
-            <div class="symbol">◇</div>
-            <h3>Marketplace</h3>
-            <p>A planned place to discover products and services.</p>
-            <a href="#contact" data-hub="Marketplace">Explore hub →</a>
-          </article>
-          <article class="card" data-search="advertising campaigns promotion brands">
-            <div class="symbol">◎</div>
-            <h3>Advertising Hub</h3>
-            <p>Tools for future campaigns, promotion and brand visibility.</p>
-            <a href="#contact" data-hub="Advertising Hub">Explore hub →</a>
-          </article>
-          <article class="card" data-search="business management operations">
-            <div class="symbol">▦</div>
-            <h3>Business Management</h3>
-            <p>A planned workspace for organizing business activities.</p>
-            <a href="#contact" data-hub="Business Management">Explore hub →</a>
-          </article>
-          <article class="card" data-search="media production studio film video">
-            <div class="symbol">▶</div>
-            <h3>Media Production</h3>
-            <p>A future home for production projects and media services.</p>
-            <a href="#contact" data-hub="Media Production">Explore hub →</a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="about">
-      <div class="wrap card">
-        <div class="tag">Our mission</div>
-        <h2>Built for creators and businesses</h2>
-        <p class="muted">
-          PHILEX MEDIA aims to connect creative work and business
-          opportunities through one accessible digital platform.
-          This first version is the responsive website foundation.
-        </p>
-      </div>
-    </section>
-
-    <section id="contact">
-      <div class="wrap card">
-        <div class="tag">Get started</div>
-        <h2>Explore PHILEX MEDIA</h2>
-        <p class="muted">
-          This is an initial front-end version. Accounts, payments,
-          uploads, messaging and other backend features are not yet
-          connected.
-        </p>
-        <p id="selection" aria-live="polite">Select a hub above to get started.</p>
-        <button class="btn secondary" id="resetBtn" type="button">Clear selection</button>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="wrap">
-      © <span id="year"></span> PHILEX MEDIA. All rights reserved.
+      </form>
+      <p class="notice">Local preview only. Tracks are not published or saved to an online account.</p>
     </div>
-  </footer>
 
-  <script>
-    const searchInput = document.getElementById('hubSearch');
-    const cards = [...document.querySelectorAll('#hubGrid .card')];
-    const status = document.getElementById('status');
-    const selection = document.getElementById('selection');
+    <div id="trackList" class="grid"></div>
+    <div class="notice">Online artist profiles, permanent uploads, album publishing and streaming for other users require a backend and media storage.</div>
+  </section>
 
-    function searchHubs() {
-      const query = searchInput.value.trim().toLowerCase();
-      let count = 0;
-      cards.forEach(card => {
-        const matches = (card.innerText + ' ' + card.dataset.search)
-          .toLowerCase().includes(query);
-        card.hidden = !matches;
-        if (matches) count++;
-      });
-      status.textContent = query
-        ? count + ' hub(s) found.'
-        : 'Showing all six hubs.';
+  <section id="market" class="section">
+    <h2>PHILEX MARKET</h2>
+    <p class="muted">A marketplace for sellers to showcase products and for customers to discover them.</p>
+    <div class="toolbar">
+      <input class="search" id="marketSearch" placeholder="Search products or categories..." oninput="renderProducts()">
+      <button class="btn primary" onclick="toggleForm('productForm')">+ List product</button>
+    </div>
+
+    <div id="productForm" class="form-card hidden">
+      <h3>Create a product preview</h3>
+      <p class="small">Your listing will appear in this browser session only.</p>
+      <form id="addProductForm">
+        <label>Product name</label><input id="productName" required maxlength="100" placeholder="What are you selling?">
+        <label>Seller name</label><input id="sellerName" required maxlength="100" placeholder="Your shop or business name">
+        <label>Category</label>
+        <select id="productCategory">
+          <option>Fashion</option><option>Electronics</option><option>Music & Audio</option>
+          <option>Home & Living</option><option>Beauty</option><option>Services</option><option>Other</option>
+        </select>
+        <label>Price (UGX)</label><input id="productPrice" type="number" min="0" step="1" required placeholder="Enter price">
+        <label>Description</label><textarea id="productDescription" maxlength="600" placeholder="Describe your product"></textarea>
+        <label>Product photo (optional)</label><input id="productImage" type="file" accept="image/*">
+        <div class="actions">
+          <button class="btn primary" type="submit">Preview listing</button>
+          <button class="btn" type="button" onclick="toggleForm('productForm')">Cancel</button>
+        </div>
+      </form>
+      <p class="notice">Preview only. No online listing, order, payment or customer transaction is created.</p>
+    </div>
+
+    <div id="productList" class="grid"></div>
+    <div class="notice">Seller accounts, saved listings, checkout, delivery and real payments must be connected before this marketplace can accept orders.</div>
+  </section>
+</main>
+
+<footer>PHILEX MEDIA · Music & Market · Built for creators and businesses</footer>
+
+<script>
+const tracks = [];
+const products = [];
+const localUrls = [];
+
+function showHub(hub) {
+  document.getElementById('music').classList.toggle('active', hub === 'music');
+  document.getElementById('market').classList.toggle('active', hub === 'market');
+  document.getElementById('musicTab').classList.toggle('active', hub === 'music');
+  document.getElementById('marketTab').classList.toggle('active', hub === 'market');
+  document.getElementById('heroTitle').textContent =
+    hub === 'music' ? 'Discover the sound.' : 'Discover something new.';
+  document.getElementById('heroText').textContent =
+    hub === 'music'
+      ? 'A home for artists, music, and new discoveries.'
+      : 'A place for products, sellers, and new opportunities.';
+  window.scrollTo({top: 0, behavior: 'smooth'});
+}
+
+function toggleForm(id) {
+  document.getElementById(id).classList.toggle('hidden');
+}
+
+function escapeHTML(value) {
+  return String(value).replace(/[&<>"']/g, char => ({
+    '&':'&amp;', '<':'&lt;', '>':'&gt;',
+    '"':'&quot;', "'":'&#39;'
+  })[char]);
+}
+
+function renderMusic() {
+  const query = document.getElementById('musicSearch').value.toLowerCase();
+  const list = document.getElementById('trackList');
+  const matches = tracks.filter(t =>
+    (t.title + ' ' + t.artist + ' ' + t.genre).toLowerCase().includes(query)
+  );
+
+  list.innerHTML = matches.length ? matches.map(t => `
+    <article class="card item">
+      <div class="art">♫</div>
+      <h3>${escapeHTML(t.title)}</h3>
+      <div>${escapeHTML(t.artist)}</div>
+      <div class="small">${escapeHTML(t.genre)}</div>
+      <audio controls preload="metadata" src="${t.url}"></audio>
+      <div class="small">Local preview · Not published</div>
+    </article>
+  `).join('') : `
+    <div class="empty">
+      <h3>No tracks found</h3>
+      <p class="muted">Add an audio file to preview your first track here.</p>
+      <button class="btn" onclick="toggleForm('trackForm')">Add music</button>
+    </div>`;
+}
+
+function renderProducts() {
+  const query = document.getElementById('marketSearch').value.toLowerCase();
+  const list = document.getElementById('productList');
+  const matches = products.filter(p =>
+    (p.name + ' ' + p.seller + ' ' + p.category + ' ' + p.description)
+      .toLowerCase().includes(query)
+  );
+
+  list.innerHTML = matches.length ? matches.map(p => `
+    <article class="card item">
+      ${p.image ? `<img src="${p.image}" alt="${escapeHTML(p.name)}">` : `<div class="art">◇</div>`}
+      <div class="small">${escapeHTML(p.category)}</div>
+      <h3>${escapeHTML(p.name)}</h3>
+      <div class="price">UGX ${Number(p.price).toLocaleString('en-UG')}</div>
+      <div>Seller: ${escapeHTML(p.seller)}</div>
+      <p class="muted">${escapeHTML(p.description || 'No description provided.')}</p>
+      <div class="small">Preview listing · Not for sale online</div>
+    </article>
+  `).join('') : `
+    <div class="empty">
+      <h3>No products found</h3>
+      <p class="muted">Create a product preview to see how your listing looks.</p>
+      <button class="btn" onclick="toggleForm('productForm')">List product</button>
+    </div>`;
+}
+
+document.getElementById('addTrackForm').addEventListener('submit', event => {
+  event.preventDefault();
+  const file = document.getElementById('trackFile').files[0];
+  if (!file) return;
+  if (!file.type.startsWith('audio/')) {
+    alert('Please select a valid audio file.');
+    return;
+  }
+  const url = URL.createObjectURL(file);
+  localUrls.push(url);
+  tracks.unshift({
+    title: document.getElementById('trackTitle').value.trim(),
+    artist: document.getElementById('trackArtist').value.trim(),
+    genre: document.getElementById('trackGenre').value,
+    url
+  });
+  renderMusic();
+  event.target.reset();
+  toggleForm('trackForm');
+});
+
+document.getElementById('addProductForm').addEventListener('submit', event => {
+  event.preventDefault();
+  const file = document.getElementById('productImage').files[0];
+
+  const add = imageData => {
+    products.unshift({
+      name: document.getElementById('productName').value.trim(),
+      seller: document.getElementById('sellerName').value.trim(),
+      category: document.getElementById('productCategory').value,
+      price: document.getElementById('productPrice').value,
+      description: document.getElementById('productDescription').value.trim(),
+      image: imageData || ''
+    });
+    renderProducts();
+    event.target.reset();
+    toggleForm('productForm');
+  };
+
+  if (file) {
+    if (!file.type.startsWith('image/')) {
+      alert('Please select a valid image.');
+      return;
     }
+    if (file.size > 5 * 1024 * 1024) {
+      alert('Please choose an image smaller than 5 MB.');
+      return;
+    }
+    const reader = new FileReader();
+    reader.onload = () => add(reader.result);
+    reader.onerror = () => alert('Could not read that image. Please try again.');
+    reader.readAsDataURL(file);
+  } else {
+    add('');
+  }
+});
 
-    document.getElementById('searchBtn').addEventListener('click', searchHubs);
-    searchInput.addEventListener('input', searchHubs);
-
-    document.querySelectorAll('[data-hub]').forEach(link => {
-      link.addEventListener('click', () => {
-        selection.textContent = link.dataset.hub +
-          ' selected. Its full features have not been implemented yet.';
-      });
-    });
-
-    document.getElementById('resetBtn').addEventListener('click', () => {
-      selection.textContent = 'Select a hub above to get started.';
-    });
-
-    document.getElementById('year').textContent = new Date().getFullYear();
-    status.textContent = 'Showing all six hubs.';
-  </script>
+renderMusic();
+renderProducts();
+</script>
 </body>
-  </html>
-  
+</html>
